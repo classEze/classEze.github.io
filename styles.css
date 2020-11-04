@@ -129,6 +129,16 @@ main{
     align-items: center;
     justify-content: center;
 }
+.fifth_box{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background:var(--secondaryColor);
+    width:100vw;
+    flex-direction: column;
+    color:black;
+    }  
+
 .current_box_container{
     display:flex;
     justify-content: center;
@@ -148,10 +158,6 @@ flex-direction:column;
     align-self:center;
     padding:10px
 
-}
-.fifth_box{
-    color:black;
-    flex-direction: column;
 }
 .pt_container{
     display: flex;
@@ -210,6 +216,16 @@ flex-direction:column;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
+}
+.about_me{
+font-size: var(--mediumFont);
+padding:0;
+color: var(--primaryColor);
+margin-bottom: 10px;
+border-bottom:3px solid var(--primaryColor);
+align-self:center
+
+ 
 }
  .project_text, .project_name{
     font-size: var(--mediumFont);
@@ -364,13 +380,15 @@ border-bottom:3px solid var(--primaryColor)
         border-bottom:3px solid var(--primaryColor);
         margin-bottom: 5px;
     }
-     .fifth_box{
+     /* .fifth_box{
         display:flex;
         justify-content: space-around;
         align-items: center;
         background:var(--secondaryColor);
         width:100vw;
-         }   
+        flex-direction: column;
+        color:black;
+        }   */
      .my_words{
          width:100%;
          font-size:18px;
