@@ -28,6 +28,8 @@ header {
     background-color:#111f3b;
     justify-content: space-between;
     position: fixed;
+    top:0;
+    z-index: 1;
 }
 .bar_container{
     display:none;
@@ -51,20 +53,21 @@ footer {
     font-size:var(--smallFont)
 }
 .mobile_nav{
+    display:flex;
     flex-direction:column;
     width:100vw;
     align-items: center;
     justify-content: space-around;
     background-color: var(--primaryColor);
-    margin-top:78px;
-    align-self: flex-end;
+    position:fixed;
+    top:78px;
+    z-index: 1;
 }
 .close{
   border:2px solid var(--secondaryColor);
   width: 30vw;
   font-size: var(--smallFont);
   color: var(--primaryColor);
-
 }
 
 ul{
@@ -159,8 +162,7 @@ flex-direction:column;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    height:90%;
+    height:auto;
     justify-content: space-between;
     font-size: var(--smallFont);
     margin-left: 20px;
@@ -208,8 +210,6 @@ flex-direction:column;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
-
-
 }
  .project_text, .project_name{
     font-size: var(--mediumFont);
@@ -217,7 +217,6 @@ justify-content: space-around;
 }
 .project_text{
     border-bottom: 2px solid var(--spiceitUp);
-
 }
 .footer_text{
     border:none;
@@ -230,7 +229,6 @@ justify-content: space-around;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .each_show_case{
@@ -288,6 +286,7 @@ font-size: var(--biggestFont);
 .para{
 padding:0;
 color: black;
+margin-bottom: 10px;
 border-bottom:3px solid var(--primaryColor)
 }
 
@@ -336,18 +335,20 @@ border-bottom:3px solid var(--primaryColor)
         flex-wrap: wrap;
     }
     .icodein_box, .iworkwith_box{
-        height:50%;
+        height:auto;
         width:80vw;
         font-size: var(--mediumFont);
         border: none;
     }
     .area{
-        height:90%;
+        /* height:90%; */
         width:90vw;
+        padding:13px;
         font-size: var(--mediumFont);
     }
     .matete_image{
-        height: 80%;
+        height:70px;
+        width:70px;
     }
     .third_box{
         height:auto;
@@ -364,8 +365,12 @@ border-bottom:3px solid var(--primaryColor)
         margin-bottom: 5px;
     }
      .fifth_box{
-         height:auto
-     }   
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        background:var(--secondaryColor);
+        width:100vw;
+         }   
      .my_words{
          width:100%;
          font-size:18px;
@@ -380,7 +385,6 @@ border-bottom:3px solid var(--primaryColor)
          width:100vw
      }
      .iam_text{
-         padding:70px;
          font-size: var(--mediumFont);
      }
      .current_box_container{
@@ -405,6 +409,17 @@ border-bottom:3px solid var(--primaryColor)
     padding:15px;
     margin-bottom: 10px;
 }
+.first_box{
+    height:65vh;
+    position:relative;
+}
+.iam_text{
+    position:absolute;
+    top:70px;
+    font-size: 25px;
+    left:7px
+}
+
 
 .bar_container{
     display:block;

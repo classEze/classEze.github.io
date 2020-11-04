@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        /* div.mobile_nav{
+            display:none */
+        /* } */
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ochonogor Eze</title>
@@ -13,7 +18,7 @@
         <span><i class='fa fa-bars mobile_menu' style='color:white; font-size: 40px;'></i> </span><span style='color:white; font-size: 30px;'>MENU</span>
       </div>
 
-     <div class="">
+     <div >
             <ul id="navigation">
             <li><a href="#home" class="header_link">Home</a></li>
             <li><a href="#about" class="header_link">About Me</a></li>
@@ -25,16 +30,16 @@
     </header>
 
     <main>
-        <div class="mobile_nav" style='display:none'>
+        <div class='hidden_nav'>
             <span><a href="#home" class="header_link hide">Home</a></span>
             <span><a href="#about" class="header_link hide">About Me</a></span>
             <span><a href="#projects" class="header_link hide">Projects</a></span>
             <span><a href="#contact" class="header_link hide">Contact Me</a></span>
             <button class='close hide'>Close</button>
-            </div>
+        </div>
     
 <section class="dark_box first_box"  id='home'>
-<div class="iam_text" >
+<div class="iam_text">
     <span class='iam_iam'> Hello, I am Eze.<br/> </span>    
     <span class='iam_fullstack'> A scientist, fullstack developer and problem solver..<br/></span>
     <span class='iam_welcome'> Welcome to my world!!!</span>
@@ -167,8 +172,8 @@
     </div>
 </section>
 <!-- fourth box  ends here -->    
-<section class=" light_box fifth_box" id='about'>
-    <p class="project_text para">  About Me</p>
+<section class=" fifth_box" id='about'>
+    <p class="project_text para"> About Me</p>
     <div class="pt_container">
     <img src="images/me.jpg" alt=" Me" class="my_pic">
     <div class="words">

@@ -1,15 +1,15 @@
 // gsap.registerPlugin(scrollTrigger)
 // gsap.registerPlugin(textPlugin)
-gsap.from('.iam_text', {opacity:0, scale:0.5, duration:10})
+gsap.from('.iam_text', {opacity:0, scale:0.2, duration:5})
 
 
 
 
-//manipulations
+//mobile_nav manipulations
 document.querySelector('.mobile_menu').addEventListener('click', (e)=>{
-    document.querySelector('.mobile_nav').style.display='flex';
+    document.querySelector('div.hidden_nav').classList.toggle('mobile_nav')
 })
 
 document.querySelector('.close').addEventListener('click', (e)=>{
-    document.querySelector('.mobile_nav').style.display='none';
+    document.querySelector('.mobile_nav').classList.toggle('mobile_nav')
 })
