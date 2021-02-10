@@ -6,8 +6,6 @@
     --mediumFont:40px;
     --smallFont:30px;
     --textBlack:black;
-    --primaryFont:hiatus;
-    --secondaryFont:ayeleoo;
 }
 body *{
     transition:1s
@@ -21,7 +19,7 @@ body, html{
      padding:0;
      margin:0;
 }
-header {
+header{
     display:flex;
     height:78px;
     width:100vw;
