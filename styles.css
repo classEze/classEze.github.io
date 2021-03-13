@@ -43,7 +43,7 @@ input[type=checkbox]{
 
 .hidden_nav{
     position: fixed;
-    top: 77px;
+    top: 78.3px;
     width: 100vw;
     display: none;
     flex-direction:column;
@@ -54,13 +54,17 @@ input[type=checkbox]{
     z-index: 1;
     box-shadow: 1px 1px 1px 1px white;
 }
+.hiiden_nav > * {
+    margin-top: 10px;
+    cursor: pointer;
+}
 
 footer {
     display:flex;
     height:78px;
     width:100vw;
     background-color:#111f3b;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
 }
@@ -315,7 +319,7 @@ border-bottom:2px solid var(--primaryColor)
 
 .area{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     width:100%;
@@ -461,5 +465,8 @@ img.show_case_image {
     
     input[type=checkbox]:checked ~ .hidden_nav {
       display: flex;
+    }
+    footer .footer_text{
+        font-size: 17px;
     }
 }
