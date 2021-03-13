@@ -7,8 +7,11 @@
     --smallFont:30px;
     --textBlack:black;
 }
-body *{
-    transition:1s
+header *{
+    transition:1.5s
+}
+*{
+    box-sizing: border-box;
 }
 
 body, html{
@@ -18,21 +21,39 @@ body, html{
      overflow-x: hidden; 
      padding:0;
      margin:0;
-}
+
+    }
 header{
     display:flex;
     height:78px;
-    width:100vw;
     background-color:#111f3b;
     justify-content: space-between;
     position: fixed;
     top:0;
+    width: 100vw;
     z-index: 1;
+    align-items: center;
 }
-.bar_container{
-    display:none;
-   }
+.mobile_menu{
+    display: none;
+}
+input[type=checkbox]{
+    display: none;
+}
 
+.hidden_nav{
+    position: fixed;
+    top: 77px;
+    width: 100vw;
+    display: none;
+    flex-direction:column;
+    width:100vw;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    z-index: 1;
+    box-shadow: 1px 1px 1px 1px white;
+}
 
 footer {
     display:flex;
@@ -43,29 +64,11 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-.footer_text{
-    margin:auto;
-     border:none;
+footer  div:nth-child(2) {
+    align-self: flex-end
 }
 .top{
     font-size:var(--smallFont)
-}
-.mobile_nav{
-    display:flex;
-    flex-direction:column;
-    width:100vw;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--primaryColor);
-    position:fixed;
-    top:78px;
-    z-index: 1;
-}
-.close{
-  border:2px solid var(--secondaryColor);
-  width: 30vw;
-  font-size: var(--smallFont);
-  color: var(--primaryColor);
 }
 
 ul{
@@ -86,12 +89,11 @@ li a:hover{
 }
 
 .avatara{
-    height:90%;
-    width: 70px;
+    height:55px;
+    width: 55px;
     border-radius:50%;
     margin-right: 15px;
-
-}
+   }
 .header_link{
     color:var(--secondaryColor);
     font-size: var(--smallFont);
@@ -103,23 +105,21 @@ main{
     align-items: center;
     color:white;
     flex:1;
-    font-family: Russo One;
 } 
 
 .dark_box{
     display:flex;
     background-color:var(--primaryColor);
     color: white;
-    height:100vh;
-    width:100vw;
 }
-.first_box{
-    display: flex;
+section.first_box{
+    margin-top: 79px;
+    height: 500px ;
+    width: 100vw;
+    font-family: 'Merienda', cursive;
+    display: grid;
     align-items: center;
-    justify-content: flex-end;
-    background-image: url('images/background.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    justify-items: center;
 }
 .fourth_box{
     display: flex;
@@ -139,23 +139,26 @@ main{
 
 .current_box_container{
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .current_header{
     margin:10px 0;
+    text-decoration: underline;
 }
 .current{
-width:30%;
-height:50%;
 display:flex;
 flex-direction:column;
+font-family:'Merienda' ;
 }
 .current_description{
     border:2px solid white;
-    background:black;
+    background:rgba(20, 14, 14, 0.7);
     align-self:center;
     padding:10px
-
+}
+.current p {
+    text-align: center;
 }
 .pt_container{
     display: flex;
@@ -206,77 +209,84 @@ flex-direction:column;
     justify-content: space-around;
     align-items: center;
     background:var(--secondaryColor);
-    height:95vh;
-    width:100vw;
+    width:90vw;
+    padding: 20px;
 }
 
 .third_box{
 flex-direction: column;
 align-items: center;
-justify-content: space-around;
+}
+section#about{
+    font-family:'kadwa' , cursive;
 }
 .about_me{
 font-size: var(--mediumFont);
 padding:0;
 color: var(--primaryColor);
 margin-bottom: 10px;
-border-bottom:3px solid var(--primaryColor);
-align-self:center
-
+align-self:center;
+text-decoration: underline;
+}
+ .project_text{
+    font-size: var(--mediumFont)
+ }
  
+ .project_name{
+    font-size: var(--smallFont);
+    font-family: 'kadwa', cursive;
+    margin-left:10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    display: block;
 }
- .project_text, .project_name{
-    font-size: var(--mediumFont);
-    color:white;
+footer{
+    color: white;
 }
-.project_text{
-    border-bottom: 2px solid var(--spiceitUp);
-}
-.footer_text{
-    border:none;
-}
-
 .show_case{
     width:95%;
-    height:88%;
+    min-height:500px;
     background-color: white;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .each_show_case{
     height:90%;
-    width:23%;
-    border:5px solid var(--primaryColor);
-    border-radius: 15px;
+    width:30%;
+    border-radius: 3px;
     color:var(--primaryColor);
-    background:black;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+    border: 0.5px solid rgba(82, 66, 66, 0.3);
 }
-.show_case_image{
-    height:55%;
+img.show_case_image{
+    height:250px;
     width:100%;
-    padding: 0;
-    border-bottom:2px solid var(--primaryColor);
-    border-radius: 10px;
+    border: 0.5px solid rgba(82, 66, 66, 0.3);
 }
 .different_background{
+    font-family: cursive;
     font-size: 20px;
-    flex:1;
-    background:azure;
-    color: black;
+    background:rgba(10, 9, 9, 0.7);
+    color: rgb(230, 215, 215);
+    padding: 8px;
 }
-.links{
-    color:var(--spiceitUp);
-    display:flex;
+div.links{
+    display: flex;
     justify-content: space-between;
-    padding-right: 5px;
-    margin-top: 20%;
+}
+.links a{
+    color:var(--spiceitUp);
+    margin-top: 5px;
 }
 .iam_text{
-color:black;
-font-weight: bold;;
-font-size: var(--biggestFont);    
+color:white;
+font-weight: bold;
+font-size: var(--biggestFont); 
+width: 90%;
 }
 .iam_fullstack {
     font-size: var(--smallFont);
@@ -289,19 +299,18 @@ font-size: var(--biggestFont);
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height:80%;
     width:45%;
     color:white;
     font-size: var(--mediumFont);
-    border:1px solid var(--primaryColor);
-    border:0.1px solid white'
+    border:1px solid rgba(0,23,9, 0.2);
+    padding: 20px;
 
 }
 .para{
 padding:0;
 color: black;
 margin-bottom: 10px;
-border-bottom:3px solid var(--primaryColor)
+border-bottom:2px solid var(--primaryColor)
 }
 
 .area{
@@ -309,9 +318,13 @@ border-bottom:3px solid var(--primaryColor)
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height:80%;
-    width:80%;
+    width:100%;
     background-color: var(--primaryColor);
+    box-shadow:1px 2px 2px 1px rgba(14, 6, 6, 0.);
+    padding: 20px;
+
+
+
 }
 .matete{
     display: flex;
@@ -322,10 +335,9 @@ border-bottom:3px solid var(--primaryColor)
 
 }
 .matete_image{
-    height:60%;
-    width:60%;
+    height:50%;
+    width:50%;
     background-color: white;
-    border-radius: 15px;
 
 }
 .matete_text{
@@ -335,11 +347,15 @@ border-bottom:3px solid var(--primaryColor)
 .buttons{
     display: flex;
 }
+
+
+
 /* tab styles */
 @media screen and (max-width:992px){
     .dark_box, .light_box{
         width:90vw
     }
+
     
     .footer_text{
      font-size: 22px;  
@@ -347,22 +363,22 @@ border-bottom:3px solid var(--primaryColor)
     }
     .second_box, .show_case{
         flex-wrap: wrap;
+       min-height: 500px;
     }
     .icodein_box, .iworkwith_box{
-        height:auto;
-        width:80vw;
+        width:100%;
         font-size: var(--mediumFont);
-        border: none;
+        margin-bottom: 10px;
     }
     .area{
-        /* height:90%; */
-        width:90vw;
-        padding:13px;
+        width:100%;
+        padding:20px;
         font-size: var(--mediumFont);
+        margin-bottom: 10px;
     }
     .matete_image{
-        height:70px;
-        width:70px;
+        height:50px;
+        width:50px;
     }
     .third_box{
         height:auto;
@@ -370,23 +386,13 @@ border-bottom:3px solid var(--primaryColor)
     }
     .each_show_case{
         width:40%;
-        padding:15px;
         margin-bottom: 10px;
     }
     .recent{
         color: black;
-        border-bottom:3px solid var(--primaryColor);
         margin-bottom: 5px;
+        text-decoration: underline;
     }
-     /* .fifth_box{
-        display:flex;
-        justify-content: space-around;
-        align-items: center;
-        background:var(--secondaryColor);
-        width:100vw;
-        flex-direction: column;
-        color:black;
-        }   */
      .my_words{
          width:100%;
          font-size:18px;
@@ -395,23 +401,14 @@ border-bottom:3px solid var(--primaryColor)
          font-size: 17px;
          padding:3px;
      }
-     .first_box{
-         align-items:center;
-         height:90vh;
-         width:100vw
-     }
      .iam_text{
          font-size: var(--mediumFont);
-     }
-     .current_box_container{
-         flex-wrap: wrap;
      }
      .current{
          width:80%;
         }
         .current_description{
             border:2px solid white;
-            background:black;
             align-self:center;
             padding:10px
         
@@ -422,26 +419,47 @@ border-bottom:3px solid var(--primaryColor)
 @media screen and (max-width:600px){
 .each_show_case{
     width:90%;
-    padding:15px;
-    margin-bottom: 10px;
-}
-.first_box{
-    height:65vh;
-    position:relative;
+    margin-bottom: 25px;
 }
 .iam_text{
-    position:absolute;
-    top:70px;
     font-size: 25px;
-    left:7px
 }
 
-
-.bar_container{
-    display:block;
-    padding:20px
+.desktop_nav {
+ display:none; 
+  }
+img.show_case_image {
+    width: 100%;
+    height: 250x;
+    display: block;
+    object-fit: cover;
    }
-   #navigation {
-    display:none;
+   div.mobile_menu{
+    display: block;
 }
+
+    
+    input[type=checkbox] ~ label {
+        display: block;
+        background: url("./images/burger1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 45px;
+        height: 45px;
+        margin-left: 20px;
+    }
+    
+    input[type=checkbox]:checked ~ label {
+        background: url("./images/burger_close1.jpg");
+        display: block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 45px;
+        height: 45px;
+        margin-left: 20px;
+    }
+    
+    input[type=checkbox]:checked ~ .hidden_nav {
+      display: flex;
+    }
 }
