@@ -313,10 +313,11 @@ width: 90%;
     color:white;
     font-size: var(--mediumFont);
     border:1px solid rgba(0,23,9, 0.2);
-    padding: 20px;
     opacity: 0;
-    transform:translate(-100px)
-
+    transform:translate(-150px)
+}
+.iworkwith_box{
+    transform: translate(150px);
 }
 .para{
 padding:0;

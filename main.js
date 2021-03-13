@@ -10,21 +10,20 @@ textTimeline.to('.iam_iam', {text: "Hello, I am Eze, <br />", ease:Power2.easeOu
 .to('.iam_welcome', {text: "Welcome to my world!!!", ease:Power4.easeOut, duration:3, delay:1} )
 
 
-const boxTimeline = gsap.timeline()
 
-boxTimeline.to('.icodein_box', { opacity:1, x:0,
-          duration:3, ease:Bounce.Out,
+gsap.to('.icodein_box', { opacity:1, x:0,
+          duration:2, ease:Bounce.inOut,
           scrollTrigger:{
           trigger:'.icodein_box',
-          toggleActions:"play none none none",
+          toggleActions:"play pause play reverse",
           start: "top center"
      }
-}).from('.icodein_box .matete' , {opacity:0, stagger: 1.5})
+})
 
-gsap.to('.iworkwith_box', {opacity:1, x:0, duration:5, ease:Linear, 
+gsap.to('.iworkwith_box', {opacity:1, x:0, duration:2, ease:Bounce.inOut, 
      scrollTrigger:{
           trigger:'.iworkwith_box',
-          toggleActions:"restart pause play reverse",
+          toggleActions:"play pause play reverse",
           start: "top center"
      }
      })
