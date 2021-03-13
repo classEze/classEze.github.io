@@ -65,11 +65,20 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-footer  div:nth-child(2) {
-    align-self: flex-end
-}
 .top{
     font-size:var(--smallFont)
+}
+.whatsapp_span{
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    z-index: 2;
+    background: none;
+}
+.whatsapp_span i{
+    background: white;
+    color:green;
+     font-size: 50px;
 }
 
 ul{
