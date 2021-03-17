@@ -94,20 +94,16 @@
  <section class=" dark_box third_box" id='projects'>
      <span class="project_text recent"> Recent projects </span>
      <div class="show_case">
-        <div class="each_show_case first_project">
-            <span class='project_name'>  Base converter</span>
-            <img src="images/baseconverter.png" alt="Here" class="show_case_image">
-            <div class="different_background">
-            <span class='description'> Stacks and queues came in handy. this one's easy just enter a number and the base you want to convert it to. </span>
-<div class="links">
-    <a href="https://classeze.github.io/algos/" class="live"> View Site</a>
-    <a href="http://github.com/classEze/algos" class="repo"><i class='fa fa-github'></i> Github</a>
-</div>
-</div>
-        </div>
         <div class="each_show_case">
             <span class='project_name'> Middletrust</span>
-            <img src="images/middletrust.png" alt="Here" class="show_case_image">
+            <aside id="one">
+                <i class='fa fa-chevron-circle-left' onclick="changeIndex(event,-1)" style=' font-size: 40px;' ></i>
+                <img src="images/telepota.png" alt="Here" class="show_case_image">
+                <img src="images/searchos.png" alt="Here" class="show_case_image">
+                <img src="images/baseconverter.png" alt="Here" class="show_case_image">
+                <img src="images/mongodb.jpg" alt="Here" class="show_case_image">
+                <i class='fa fa-chevron-circle-right' onclick="changeIndex(event,1)" style=' font-size:40px;' ></i>
+            </aside>
             <div class="different_background">
             <span class='description'> A Website for a Fintech company operating in Nigeria <br />
                 Tech used:  React, Tailwind, Nodejs. </span>
@@ -121,7 +117,14 @@
         </div>
         <div class="each_show_case">
             <span class='project_name'> Searchos</span>
-            <img src="images/searchos.png" alt="Here" class="show_case_image">
+            <aside id="two">
+                <i class='fa fa-chevron-circle-left' onclick="changeIndex(event,-1)" style=' font-size: 40px;' ></i>
+                <img src="images/telepota.png" alt="Here" class="show_case_image">
+                <img src="images/searchos.png" alt="Here" class="show_case_image">
+                <img src="images/baseconverter.png" alt="Here" class="show_case_image">
+                <img src="images/mongodb.jpg" alt="Here" class="show_case_image">
+                <i class='fa fa-chevron-circle-right' onclick="changeIndex(event,1)" style=' font-size:40px;' ></i>
+            </aside>
             <div class="different_background">
             <span class='description'> A Hospital Location Service <br />
                 Tech used: Google Maps/Places Api, Material Design, Javascript</span>
@@ -136,8 +139,15 @@
 
         <div class="each_show_case">
             <span class='project_name'> Telepota</span>
+            <aside id="three">
+            <i class='fa fa-chevron-circle-left' onclick="changeIndex(event,-1)" style=' font-size: 40px;' ></i>
             <img src="images/telepota.png" alt="Here" class="show_case_image">
-            <div class="different_background">
+            <img src="images/searchos.png" alt="Here" class="show_case_image">
+            <img src="images/baseconverter.png" alt="Here" class="show_case_image">
+            <img src="images/mongodb.jpg" alt="Here" class="show_case_image">
+            <i class='fa fa-chevron-circle-right' onclick="changeIndex(event,1)" style=' font-size:40px;' ></i>
+        </aside>
+        <div class="different_background">
             <span class='description'> A Taxi booking application <br />
                 Tech used: Nodejs, handlebars, Google Places Api, Mongo Geojson</span>
             <div class="links">
@@ -150,7 +160,14 @@
         </div>
         <div class="each_show_case">
             <span class='project_name'> Scheduled </span>
-            <img src="images/telepota.png" alt="Here" class="show_case_image">
+            <aside id="four">
+                <i class='fa fa-chevron-circle-left' onclick="changeIndex(event,-1)" style=' font-size: 40px;' ></i>
+                <img src="images/telepota.png" alt="Here" class="show_case_image">
+                <img src="images/searchos.png" alt="Here" class="show_case_image">
+                <img src="images/baseconverter.png" alt="Here" class="show_case_image">
+                <img src="images/mongodb.jpg" alt="Here" class="show_case_image">
+                <i class='fa fa-chevron-circle-right' onclick="changeIndex(event,1)" style=' font-size:40px;' ></i>
+            </aside>
             <div class="different_background">
             <span class='description'> A Task Scheduler <br />
                 How hard is it really to do things Vanilla ? No frameworks, No jokes.
@@ -162,6 +179,25 @@
             </div>
             </div>
         </div>
+        <div class="each_show_case first_project">
+            <span class='project_name'>  Base converter</span>
+            <aside id="five">
+                <i class='fa fa-chevron-circle-left' onclick="changeIndex(event,-1)" style=' font-size: 40px;' ></i>
+                <img src="images/baseconverter.png" alt="Here" class="show_case_image">
+                <img src="images/telepota.png" alt="Here" class="show_case_image">
+                <img src="images/searchos.png" alt="Here" class="show_case_image">
+                <img src="images/mongodb.jpg" alt="Here" class="show_case_image">
+                <i class='fa fa-chevron-circle-right' onclick="changeIndex(event,1)" style=' font-size:40px;' ></i>
+            </aside>
+            <div class="different_background">
+            <span class='description'> Stacks and queues came in handy. this one's easy just enter a number and the base you want to convert it to. </span>
+<div class="links">
+    <a href="https://classeze.github.io/algos/" class="live"> View Site</a>
+    <a href="http://github.com/classEze/algos" class="repo"><i class='fa fa-github'></i> Github</a>
+</div>
+</div>
+        </div>
+
      </div>                 
 </div>
 </section>
@@ -210,7 +246,7 @@
     </main>
     <footer>
         <div class="footer_text project_text" id='contact'> &copy Ochonogor, 2021 | +2348160245148. </div>
-        <div> <i class='fa fa-chevron-circle-up' style='color:white; font-size: 40px;' ></i></div>
+        <div> <i class='fa fa-chevron-circle-up' style=' font-size: 40px;' ></i></div>
     </footer>
     <span class="whatsapp_span">
         <a href='https://wa.me/2348160245148' target='_blank'

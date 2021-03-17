@@ -29,3 +29,37 @@ gsap.to('.iworkwith_box', {opacity:1, x:0, duration:2, ease:Bounce.inOut,
      })
 
 
+
+     // slider
+
+     var activeIndex = 1
+
+
+     // document.addEventListener('DOMContentLoaded' , carousel )
+     const sliders = document.querySelectorAll('.each_show_case aside')
+
+     sliders.forEach(slider=> carousel(slider))
+
+     console.log(sliders)
+
+
+     function carousel(htmlElement){
+          const imageArray = document.querySelectorAll(`#${htmlElement.getAttribute('id')} img`)
+          imageArray.forEach((image,index)=>{
+          if(index == activeIndex ){
+             image.classList.add('active')
+          }   
+     })
+     }
+
+     function changeIndex (e,num) {
+        activeIndex += num
+        activeIndex === -1 &&  ( activeIndex = document.querySelectorAll(`#${e.target.parentNode.getAttribute('id')} img`).length - 1)
+        activeIndex === document.querySelectorAll(`#${e.target.parentNode.getAttribute('id')} img`).length  &&  ( activeIndex = 0 )
+
+        document.querySelector(`#${e.target.parentNode.getAttribute('id')} img.active`).classList.remove('active')
+        carousel(e.target.parentNode)
+     }
+
+
+
