@@ -298,14 +298,15 @@ footer{
     {
      position: absolute;
      top: 35%;
-     right: 5px;
-     width: 10%;
+     right: 3px;
      color: white;
      z-index: 1;
+     width: 11%;
      background: rgba(0,0,0,0.5);
+     text-align: center;
    }
    i.fa-chevron-circle-left{
-    left: 5px;  
+    left: 3px; 
    }
 .different_background{
     font-family: 'kadwa';
