@@ -25,10 +25,9 @@ body, html{
     display:flex;
     flex-direction: column;
     align-items: center;
-     overflow-x: hidden; 
+     overflow-x: hidden;
      padding:0;
      margin:0;
-
     }
 header{
     display:flex;
@@ -38,7 +37,7 @@ header{
     position: fixed;
     top:0;
     width: 100vw;
-    z-index: 1;
+    z-index: 5;
     align-items: center;
 }
 .mobile_menu{
@@ -58,7 +57,7 @@ div.hidden_nav{
     align-items: center;
     justify-content: space-around;
     background-color: black;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 1px 1px 1px 1px white;
     animation-name: drop-down;
     animation-duration: 2s;
