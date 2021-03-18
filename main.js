@@ -55,7 +55,7 @@ gsap.to('.iworkwith_box', {opacity:1, x:0, duration:2, ease:Bounce.inOut,
      function changeIndex (e,num) {
         activeIndex += num
         activeIndex === -1 &&  ( activeIndex = document.querySelectorAll(`#${e.target.parentNode.getAttribute('id')} img`).length - 1)
-        activeIndex === document.querySelectorAll(`#${e.target.parentNode.getAttribute('id')} img`).length  &&  ( activeIndex = 0 )
+        activeIndex >= document.querySelectorAll(`#${e.target.parentNode.getAttribute('id')} img`).length  &&  ( activeIndex = 0 )
 
         document.querySelector(`#${e.target.parentNode.getAttribute('id')} img.active`).classList.remove('active')
         carousel(e.target.parentNode)
